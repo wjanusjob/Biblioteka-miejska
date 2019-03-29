@@ -1,0 +1,75 @@
+extend base.pug
+block content
+     script(src="/scripts/addgenre.js")
+     style 
+         include styles/infobook.css
+     div(id="bookup")
+        div(id="bookcover")
+            input(type="file" id="filecover" accept="image/png, image/jpg")
+        div(id="bookinfo")
+            div(id="info")
+                table
+                  
+                    tr
+                        td Autor: 
+                        td 
+                            input(type="text"  id="inautor")
+                    tr
+                        td Tytuł: 
+                        td
+                            input(type="text"  id="intytuł")
+                    tr(id="gatunkitr")
+                        td Gatunki: 
+                         each val in genres
+                            td
+                                select(class = "editgenres" id="genre" + val.nazwa)
+                                    option=val.nazwa
+                                    each genre in selectGatunek
+                                        option=genre
+                        
+                        td  
+                            button(type="button" id="addgenre") dodaj
+                    tr
+                        td Wydanie: 
+                        td
+                            input(type="text"  id="inwydanie")
+                    tr
+                        td Data Wydania: 
+                        td
+                            input(type="text"  id="indata")
+                    tr
+                        td Miejsce Wydania: 
+                        td
+                            input(type="text"  id="inmiejsce")
+                    tr
+                        td ilość stron: 
+                        td
+                            input(type="text"  id="instrony")
+                    tr
+                        td Strony nienumerowane: 
+                        td
+                            input(type="text"  id="inienumerowane")
+                    tr
+                        td Wymiary: 
+                        td
+                            input(type="text"  id="inwymiary")
+                    tr
+                        td ISBN: 
+                        td
+                            input(type="text"  id="inisbn")
+                    tr
+                        td    
+                            button(type="button" id="editbutt") edytuj
+                        td
+                            button(type="button" id="addcopy") dodaj egzemplarz
+            div(id="buttons")
+                div(class="bookbutt") opis
+        div(id="copies")
+            table
+                tr(class="copiesrows") 
+                    td numer egzemplarza  
+                    td dostępność
+                button(id="addcopy") dodaj egzemplarz;
+                        //- td(class="availability")=(copy.dostępność==1?img(class="bookimg" src="/img/czas_zniw.jpg") :'niedostępne')
+     div(id="bookdown")
+     input(type="text"  id="inopis")

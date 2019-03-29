@@ -1,0 +1,45 @@
+#content{
+    display: inline;
+}
+.bookimg{
+    width: 170px;
+}
+.book{
+    display: grid;
+    grid-template-columns: 170px 80%;
+}
+.bookinformation{
+    display: flex;
+}
+.bookheaderinfo{
+    font-weight: bold;
+    font-size: 18px;
+    margin-block-end: 1%;
+    margin-block-start: 20%;
+}
+.whatdata{
+    margin-inline-end: 3%;
+    margin-inline-start: 3%;
+}
+.moreinfobutt{
+    color: inherit;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: #BBBBF2;
+    padding: 3%;
+    margin-left: 15%;
+    padding-inline-end: 101px;
+    padding-inline-start: 101px;
+}
+.whereisbutton{
+    margin-top: 60px;
+}
+#loadmore{
+    color: inherit;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 30%;
+    color: #29A3CC;
+}
