@@ -1,0 +1,8 @@
+extend base.pug
+block content
+    script(src="/scripts/creategenre.js")
+    label(for="inputnazwa") Nazwa gatunku
+    input(type="text" id="inputnazwagatunek")
+    label(for="input opis") opis
+    input(type="text" id="inputopisgatunek")
+    button(type="button" id="addgenrebutton") dodaj
